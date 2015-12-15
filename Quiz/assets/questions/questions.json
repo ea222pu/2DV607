@@ -1,0 +1,38 @@
+{
+    "scifi": [
+        {
+            "question": "What series of books did Dan Simmons write?",
+            "altOne": "Dune",
+            "altTwo": "Hyperion Cantos",
+            "altThree": "Foundation",
+            "altFour": "Revelation Space",
+            "answer": "2"
+        },
+        {
+            "question": "Who's better: Picard or Kirk?",
+            "altOne": "Kirk",
+            "altTwo": "Picard",
+            "altThree": "Spock ofc...",
+            "altFour": "Q",
+            "answer": "2"
+        }
+    ],
+    "movies": [
+        {
+            "question": "Movie 1",
+            "altOne": "1",
+            "altTwo": "2",
+            "altThree": "3",
+            "altFour": "4 (This is correct)",
+            "answer": "4"
+        },
+        {
+            "question": "Movie 2",
+            "altOne": "1 (This is correct)",
+            "altTwo": "2",
+            "altThree": "3",
+            "altFour": "4",
+            "answer": "1"
+        }
+    ]
+}
