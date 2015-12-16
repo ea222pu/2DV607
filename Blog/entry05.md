@@ -5,3 +5,5 @@ I'm in the process of moving all the logic of the game from component to the red
  2. Update score, increment index
  3. Repeat 1,2 until index = questionList.length-1
  4. End game, show score
+
+ The application is available [here](http://ea222pu.github.io/2DV607/Quiz).
