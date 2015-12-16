@@ -1,5 +1,5 @@
 var Redux = require('redux'),
-    initState = require('./initialstate.js'),
-    reducer = require('./reducer.js');
+    reducer = require('./reducer.js'),
+    initState = require('./initialstate.js');
 
-module.exports = Redux.createStore(reducer);
+module.exports = Redux.createStore(reducer, initState());

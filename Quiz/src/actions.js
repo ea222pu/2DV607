@@ -1,10 +1,22 @@
+var constants = require('./constants.js');
+
 module.exports = {
 
     isCorrect: function(answer) {
-        return {type: "IS_CORRECT", answer};
+        return {
+            type: constants.ANSWER,
+            answer
+        };
+    },
+    updateScore: function() {
+        return {
+            type: constants.UPDATE_SCORE
+        };
     },
     nextQuestion: function() {
-        return {type: "NEXT_QUESTION"};
+        return {
+            type: constants.NEXT_QUESTION
+        };
     }
 
 };

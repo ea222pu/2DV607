@@ -16,23 +16,5 @@
             "altFour": "Q",
             "answer": "2"
         }
-    ],
-    "movies": [
-        {
-            "question": "Movie 1",
-            "altOne": "1",
-            "altTwo": "2",
-            "altThree": "3",
-            "altFour": "4 (This is correct)",
-            "answer": "4"
-        },
-        {
-            "question": "Movie 2",
-            "altOne": "1 (This is correct)",
-            "altTwo": "2",
-            "altThree": "3",
-            "altFour": "4",
-            "answer": "1"
-        }
     ]
 }

@@ -1,6 +1,9 @@
-modul.exports = {
-    //Game states
-    QUESTION: "QUESTION",
+module.exports = {
+    INCREMENT_INDEX: "INCREMENT_INDEX",
+    UPDATE_SCORE: "UPDATE_SCORE",
+    IS_CORRECT: "IS_CORRECT",
+
     ANSWER: "ANSWER",
-    FINISHED: "FINISHED";
+    QUESTION: "QUESTION",
+    FINISHED: "FINISHED"
 }
