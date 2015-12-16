@@ -1,0 +1,20 @@
+{
+    "scifi": [
+        {
+            "question": "What series of books did Dan Simmons write?",
+            "altOne": "Dune",
+            "altTwo": "Hyperion Cantos",
+            "altThree": "Foundation",
+            "altFour": "Revelation Space",
+            "answer": "2"
+        },
+        {
+            "question": "Who's better: Picard or Kirk?",
+            "altOne": "Kirk",
+            "altTwo": "Picard",
+            "altThree": "Spock ofc...",
+            "altFour": "Q",
+            "answer": "2"
+        }
+    ]
+}
