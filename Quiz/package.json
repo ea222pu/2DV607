@@ -1,13 +1,19 @@
 {
   "dependencies": {
-    "react": "^0.14.0",
-    "react-dom": "^0.14.0",
-    "react-router": "1.0.0-rc3",
-    "react-redux": "^4.0.0"
+    "history": "=1.17.0",
+    "babel-preset-react": "^6.3.13",
+    "babelify": "^7.2.0",
+    "react": "^0.14.3",
+    "react-bootstrap": "^0.28.1",
+    "react-dom": "^0.14.3",
+    "react-redux": "^4.0.5",
+    "react-router": "1.0.3",
+    "redux": "^3.0.5"
   },
   "devDependencies": {
     "browserify": "=12.0.1",
-    "reactify": "=1.1.1"
+    "reactify": "=1.1.1",
+    "babelify": "^7.2.0"
   },
   "scripts": {
     "build": "browserify -t [ babelify --presets [ react ] ] src/index.js -o bundle.js"

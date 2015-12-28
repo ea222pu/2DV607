@@ -1,4 +1,5 @@
-var JSON_QUESTIONS = require('../assets/questions/questions.json');
+var JSON_QUESTIONS = require('../assets/questions/questions.json'),
+    constants = require('./constants.js');
 
 module.exports = function() {
     return {
@@ -6,17 +7,11 @@ module.exports = function() {
             score: 0
         },
         gameState: {
-            playing: false
+            GAME_STATE: constants.QUESTION
         },
         quiz: {
-            questionIndex: 0,
-            questionList: JSON_QUESTIONS.scifi,
-            currentQuestion: JSON_QUESTIONS.scifi[0].question,
-            one: JSON_QUESTIONS.scifi[0].altOne,
-            two: JSON_QUESTIONS.scifi[0].altTwo,
-            three: JSON_QUESTIONS.scifi[0].altThree,
-            four: JSON_QUESTIONS.scifi[0].altFour,
-            answer: JSON_QUESTIONS.scifi[0].answer
+            questionList: JSON_QUESTIONS.other,
+            questionIndex: 0
         }
     }
 };

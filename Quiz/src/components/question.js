@@ -9,38 +9,36 @@ var React = require('react'),
 
 var Question = React.createClass({
     propTypes: {
-        question: ptypes.string.isRequired,
-        answerAlternative: ptypes.shape({
-            altOne: ptypes.string.isRequired,
-            altTwo: ptypes.string.isRequired,
-            altThree: ptypes.string.isRequired,
-            altFour: ptypes.string.isRequired
-        }).isRequired,
-        answer: ptypes.string.isRequired,
-        isCorrect: ptypes.func.isRequired,
-        updateScore: ptypes.func.isRequired,
-        nextQuestion: ptypes.func.isRequired
+        currentQuestion: ptypes.shape({
+             question: ptypes.string.isRequired,
+             altOne: ptypes.string.isRequired,
+             altTwo: ptypes.string.isRequired,
+             altThree: ptypes.string.isRequired,
+             altFour: ptypes.string.isRequired,
+             answer: ptypes.string.isRequired
+        }),
+        isCorrect: ptypes.func.isRequired
     },
     render: function() {
         return (
             <div className="question">
                 <Jumbotron>
-                    <h3>{this.props.question}</h3>
+                    <h3>{this.props.currentQuestion.question}</h3>
                 </Jumbotron>
                 <ButtonGroup justified>
                     <ButtonGroup>
-                        <Button bsSize="large" onClick={this.props.isCorrect.bind(null, 1)}>{this.props.answerAlternative.altOne}</Button>
+                        <Button bsSize="large" onClick={this.props.isCorrect.bind(null, 1)}>{this.props.currentQuestion.altOne}</Button>
                     </ButtonGroup>
                     <ButtonGroup>
-                        <Button bsSize="large" onClick={this.props.isCorrect.bind(null, 2)}>{this.props.answerAlternative.altTwo}</Button>
+                        <Button bsSize="large" onClick={this.props.isCorrect.bind(null, 2)}>{this.props.currentQuestion.altTwo}</Button>
                     </ButtonGroup>
                 </ButtonGroup>
                 <ButtonGroup justified>
                     <ButtonGroup>
-                        <Button bsSize="large" onClick={this.props.isCorrect.bind(null, 3)}>{this.props.answerAlternative.altThree}</Button>
+                        <Button bsSize="large" onClick={this.props.isCorrect.bind(null, 3)}>{this.props.currentQuestion.altThree}</Button>
                     </ButtonGroup>
                     <ButtonGroup>
-                        <Button bsSize="large" onClick={this.props.isCorrect.bind(null, 4)}>{this.props.answerAlternative.altFour}</Button>
+                        <Button bsSize="large" onClick={this.props.isCorrect.bind(null, 4)}>{this.props.currentQuestion.altFour}</Button>
                     </ButtonGroup>
                 </ButtonGroup>
             </div>
@@ -50,14 +48,14 @@ var Question = React.createClass({
 
 var mapStateToProps = function(state) {
     return {
-        question: state.quiz.currentQuestion,
-        answerAlternative: {
-            altOne: state.quiz.one,
-            altTwo: state.quiz.two,
-            altThree: state.quiz.three,
-            altFour: state.quiz.four
+        currentQuestion: {
+            question: state.quiz.questionList[state.quiz.questionIndex].question,
+            altOne: state.quiz.questionList[state.quiz.questionIndex].altOne,
+            altTwo: state.quiz.questionList[state.quiz.questionIndex].altTwo,
+            altThree: state.quiz.questionList[state.quiz.questionIndex].altThree,
+            altFour: state.quiz.questionList[state.quiz.questionIndex].altFour,
+            answer: state.quiz.questionList[state.quiz.questionIndex].answer,
         },
-        answer: state.quiz.answer
     };
 };
 
@@ -65,12 +63,6 @@ var mapDispatchToProps = function(dispatch) {
     return {
         isCorrect: function(answer) {
             dispatch(actions.isCorrect(answer));
-        },
-        updateScore: function() {
-            dispatch(actions.updateScore());
-        },
-        nextQuestion: function() {
-            dispatch(actions.nextQuestion());
         }
     };
 };
