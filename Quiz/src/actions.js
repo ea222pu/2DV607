@@ -4,18 +4,14 @@ module.exports = {
 
     isCorrect: function(answer) {
         return {
-            type: constants.ANSWER,
+            type: constants.QUESTION,
             answer
         };
     },
-    updateScore: function() {
+    setQuiz: function(quiz) {
         return {
-            type: constants.UPDATE_SCORE
-        };
-    },
-    nextQuestion: function() {
-        return {
-            type: constants.NEXT_QUESTION
+            type: constants.SET_QUIZ,
+            quiz
         };
     }
 
